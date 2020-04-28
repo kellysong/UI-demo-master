@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_check_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="检查更新" />
+    <Button
+        android:id="@+id/btn_stop_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止下载" />
+    <Button
+        android:id="@+id/btn_jump_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第二个下载页面" />
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:text="0%"
+        android:layout_gravity="center"
+        android:textSize="14sp"/>
+</LinearLayout>

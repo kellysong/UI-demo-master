@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainActivity_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="音乐播放器" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainActivity_toolBar"
+        android:background="#FFF">
+
+        <ListView
+            android:id="@+id/musicName_list"
+            android:layout_width="match_parent"
+            android:layout_height="440dp"
+            android:textColor="#FFF" />
+
+        <RelativeLayout
+            android:id="@+id/mainActivity_seekBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/musicName_list">
+
+            <SeekBar
+                android:id="@+id/mainActivity_seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/main_current_position"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_below="@id/mainActivity_seekBar"
+                android:text="0:00"
+                android:textColor="#060606" />
+
+            <TextView
+                android:id="@+id/main_final_position"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/mainActivity_seekBar"
+                android:text="3:00"
+                android:textColor="#090808" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/mainActivity_seekBarLayout"
+            android:background="#7e7677"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/album_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="center"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/mainActivity_musicName"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/album_view"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="过火"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/mainActivity_artist"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainActivity_musicName"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/album_view"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="张信哲"
+                android:textColor="@color/gray_b5"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/mainActivity_artist"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/mainActivity_play_pause"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/btn_play" />
+
+                <ImageView
+                    android:id="@+id/mainActivity_next"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/btn_next" />
+
+                <ImageView
+                    android:id="@+id/mainActivity_menu"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/btn_music_list"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

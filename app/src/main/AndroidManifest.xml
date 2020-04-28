@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sjl.uidemo" >
+
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--配置该权限才能获取当前应用运行的服务-->
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 读取电话状态权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus"/>
+    <!-- 开启闪光灯权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-sdk tools:overrideLibrary="com.zlm.libs.registerlibrary" />
+
+    <application
+        android:name="com.sjl.application.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.sjl.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sjl.activity.LoginActivity"/>
+        <activity android:name="com.sjl.activity.TestActivity"/>
+        <!--官方控件-->
+        <activity android:name="com.sjl.activity.RecyclerView2Activity"/>
+        <activity android:name="com.sjl.activity.RecyclerViewActivity"/>
+        <activity android:name="com.sjl.activity.TabLayoutActivity"/>
+        <activity android:name="com.sjl.activity.WeChatMainActivity"/>
+        <activity android:name="com.sjl.activity.SettingActivity"/>
+        <activity android:name="com.sjl.activity.SnackBarActivity"/>
+        <activity android:name="com.sjl.activity.TableListViewActivity"/>
+        <activity android:name="com.sjl.activity.TitleListViewActivity"/>
+        <activity android:name="com.sjl.activity.ButtonStyleActivity"/>
+        <activity android:name="com.sjl.activity.RecyclerViewGroupingActivity"/>
+        <activity android:name="com.sjl.ui.expandableListView.ExpandableListViewActivity"/>
+        <!--自定义控件-->
+        <activity android:name="com.sjl.activity.HorizontalTimeLineActivity"/>
+        <activity android:name="com.sjl.activity.VerticalTimeLineActivity"/>
+        <activity android:name="com.sjl.activity.AllDialogActivity"/>
+        <activity android:name="com.sjl.activity.DatePickerActivity"/>
+        <activity android:name="com.sjl.activity.GalleryActivity"/>
+        <activity android:name="com.sjl.activity.CircleProgressBarActivity"/>
+        <activity android:name="com.sjl.activity.SearchContentActivity"/>
+        <activity android:name="com.sjl.activity.FlikerProgressBarActivity" />
+        <activity android:name="com.sjl.activity.NotificationDownloadActivity" />
+        <activity android:name="com.sjl.activity.NotificationDownloadAnotherActivity"/>
+        <activity android:name="com.sjl.activity.DialogLoadingActivity"/>
+        <activity android:name="com.sjl.activity.ThirdpartySnackBarActivity"/>
+        <activity android:name="com.sjl.activity.LeftCategoryActivity"/>
+        <activity android:name="com.sjl.ui.gridviewpage.GridViewPageActivity"/>
+        <activity android:name="com.sjl.ui.flowlayout.FlowLayoutActivity"/>
+        <activity android:name="com.sjl.activity.ScrollWebViewActivity"/>
+        <!--基础知识-->
+        <activity android:name="com.sjl.activity.AsyncTaskActivity"/>
+        <activity android:name="com.sjl.activity.CanvasDemoActivity" />
+        <activity android:name="com.sjl.ui.activityservice.ActivityAndServiceCommunicationActivity"/>
+        <activity android:name="com.sjl.ui.viewdispatch.ViewConflictActivity"/>
+
+        <service android:name="com.sjl.service.UpdateService"/>
+        <service android:name="com.sjl.ui.activityservice.CommunicationService"/>
+
+        <!--音乐播放器-->
+        <activity android:name="com.sjl.ui.musicplayer.MusicMainActivity"/>
+        <activity android:name="com.sjl.ui.musicplayer.MusicPlayActivity"/>
+        <activity android:name="com.sjl.ui.viewdispatch.ViewDispatchActivity" />
+
+        <!--不分顺序-->
+        <activity android:name="com.sjl.activity.TextViewActivity" />
+        <activity android:name="com.sjl.ui.customseekbar.SeekBarActivity" />
+        <activity android:name="com.sjl.ui.animation.ObjectAnimatorActivity" />
+        <activity android:name="com.sjl.ui.wechattab.WeChatTabActivity" />
+
+        <service android:name="com.sjl.ui.musicplayer.MusicService"/>
+    </application>
+
+</manifest>

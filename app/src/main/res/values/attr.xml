@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义圆形图片属性-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+    <!--自定义闪烁进度条属性-->
+    <declare-styleable name="FlikerProgressBar">
+        <!--进度文本字体大小 12sp-->
+        <attr name="textSize" format="dimension"/>
+        <!--下载中颜色 #40c4ff-->
+        <attr name="loadingColor" format="color"/>
+        <!--暂停时和下载完成颜色 #ff9800 -->
+        <attr name="stopColor" format="color"/>
+        <!--圆角 0dp-->
+        <attr name="radius" format="dimension"/>
+        <!--背景边框宽度 1dp-->
+        <attr name="borderWidth" format="dimension"/>
+
+    </declare-styleable>
+
+    <!--自定义呼吸灯-->
+    <declare-styleable name="BreathView">
+        <attr name="bv_radius" format="dimension"></attr>
+        <attr name="bv_color" format="string"></attr>
+        <attr name="android:layout_width"/>
+        <attr name="android:layout_height"/>
+    </declare-styleable>
+
+    <!--微信底部tab渐变-->
+    <declare-styleable name="ShadeView">
+        <attr name="icon" format="reference" />
+        <attr name="color" format="color" />
+        <attr name="text" format="string" />
+        <attr name="text_size" format="dimension" />
+    </declare-styleable>
+</resources>

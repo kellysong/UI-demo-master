@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/primary"
+        app:tabSelectedTextColor="@color/textChecked"
+        app:tabTextColor="@color/textUnChecked"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        />
+    <!-- app:tabIndicatorColor="@color/colorPrimary"    //下边指示横线的颜色
+  app:tabSelectedTextColor="@color/textChecked"  //Text选中的文字颜色
+ app:tabTextColor="@color/textUnChecked"         //没有选中的文字颜色</span>  -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        />
+</LinearLayout>

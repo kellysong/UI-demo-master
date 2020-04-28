@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--内部类写自定义view https://blog.csdn.net/shichaosong/article/details/25914007
+     1.内部类必须静态
+     2.是view不是View
+     3.加上属性class xxx.A$B-->
+    <view
+        class="com.sjl.activity.CanvasDemoActivity$CanvasView"
+        android:layout_width="250dp"
+        android:layout_height="250dp" />
+
+    <com.sjl.view.BreatheView
+        style="@style/BreathView_style"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="100dp"
+        android:background="@color/primary"
+        app:bv_color="#ff0000"
+        app:bv_radius="50dp" />
+</LinearLayout>

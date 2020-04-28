@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/primary_light">
+    <!--   android:color ：表示波纹的颜色-->
+    <!--指定了按钮的正常状态的显示效果-->
+    <item android:drawable="@drawable/bg_shape_blue">
+    </item>
+</ripple>

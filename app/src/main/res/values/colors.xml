@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#03A9F4</color> <!--标题栏颜色-->
+    <color name="primary_dark">#0288D1</color> <!--状态栏颜色-->
+    <color name="primary_light">#B3E5FC</color>
+    <color name="accent">#03A9F4</color>
+
+
+    <color name="main_blue_light">#3F56B5</color>
+    <color name="main_blue_dark">#30459E</color>
+
+    <!--公共颜色 -->
+    <color name="black">#000</color>
+    <color name="gray_555">#555555</color>
+    <color name="gray_999">#999999</color>
+    <color name="red">#fa0000</color>
+
+    <!--  头像边框颜色-->
+    <color name="dark">#FF222222</color>
+    <color name="light">#FFEEEEEE</color>
+
+    <!-- 微信底部TabLayout -->
+    <color name="white">#FFFFFF</color>
+    <color name="tab_indicator">#d6d6d6</color>
+    <color name="tab_tv_normal">#999999</color>
+    <color name="tab_tv_selected">#45c01a</color>
+    <color name="tab_bg">#fcfcfc</color>
+    <color name="tab_div">#d6d6d6</color>
+
+    <!--TabLayout选中颜色 -->
+    <color name="textChecked">#FF732F</color>
+    <color name="textUnChecked">#464646</color>
+    <color name="tabTextColor">#888888</color>
+    <!--自定义对话框颜色-->
+    <color name="commom_background">#f3f3f3</color>
+    <color name="font_common_1">#424242</color>
+    <color name="font_common_2">#a1a1a1</color>
+    <color name="font_blue">#42369a</color>
+    <!--仿qq对话框颜色-->
+    <color name="dialog_background">#FFFFFF</color>
+    <color name="dialog_text">#181818</color>
+    <color name="dialog_btn">#1E90FF</color>
+    <color name="dialog_divider">#d1d1d1</color>
+
+    <!--自定义日期选择器颜色-->
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="color1">#F0F0F0</color>
+    <color name="color2">#FFFFFF</color>
+    <color name="color3">#B0B0B0</color>
+    <color name="color4">#666666</color>
+    <color name="color5">#57C5E8</color>
+
+    <!--水波纹颜色-->
+    <color name="ripple1">#CFCFCF</color>
+
+    <!-- 通知栏下载进度条颜色 -->
+    <color name="progress_gray">#ffe4e3e4</color>
+    <color name="progress_blue">#ff06a1df</color>
+    <color name="progress_dgray">#ffb6b6b6</color>
+    <!--搜索框颜色 -->
+    <color name="status_color">#56abe4</color>
+
+    <!-- 属性筛选（流式布局）-->
+    <color name="black_1e">#1e1e1e</color>
+    <color name="black_30">#303030</color>
+    <color name="black_33">#333333</color>
+    <color name="black_3f">#3f3f3f</color>
+    <color name="black_5c">#5c5c5c</color>
+    <color name="black_66">#666666</color>
+    <color name="black_8f">#8f8f8f</color>
+    <color name="black_99">#999999</color>
+    <color name="black_f8">#f8f8f8</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="gray_7533">#75333333</color>
+    <color name="gray_46">#464646</color>
+    <color name="gray_7d">#7d7d7d</color>
+    <color name="gray_8d">#8d8d8d</color>
+    <color name="gray_9c">#9c9c9c</color>
+    <color name="gray_b5">#b5b5b5</color>
+    <color name="gray_b7">#b7b7b7</color>
+    <color name="gray_c7">#c7c7c7</color>
+    <color name="gray_d8">#d8d8d8</color>
+    <color name="gray_f3">#f3f3f3</color>
+    <color name="gray_f8">#f8f8f8</color>
+    <color name="gray_fc">#fcfcfc</color>
+
+    <color name="red_f4">#f46a69</color>
+    <color name="red_f5">#f57273</color>
+    <color name="red_fa">#fa7c7c</color>
+    <color name="red_ff">#ff5454</color>
+    <color name="red_ee">#ee5c5c</color>
+
+    <color name="green_57">#57c09f</color>
+    <color name="green_5d">#5dcaa7</color>
+
+    <color name="blue_ff">#FFD6EFFC</color>
+    <color name="blue_13">#13b0fd</color>
+    <color name="blue_title">#17acf6</color>
+    <color name="blue_21">#218dfc</color>
+    <color name="blue_2e">#2ea1fa</color>
+    <color name="blue_43">#43abff</color>
+    <color name="blue_48">#48b1ff</color>
+    <color name="blue_49">#49A3FE</color>
+    <color name="blue_4e">#4eb0f1</color>
+
+    <color name="orange_f7">#f7a805</color>
+
+    <color name="yellow_b3">#b39b61</color>
+
+    <color name="purple_bf">#bf5dee</color>
+    <color name="purple_55">#553de6</color>
+
+    <!--下载进度条-->
+    <color name="no1_gray_light">#e2e2e2</color>
+    <color name="no2_orange">#fe7d44</color>
+    <color name="no3_white">#ffffff</color>
+    <color name="no4_black">#000000</color>
+    <color name="no5_gray_silver">#b4b4b4</color>
+</resources>

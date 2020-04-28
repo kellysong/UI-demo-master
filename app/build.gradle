@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.sjl.uidemo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 5
+        versionName "2.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            // 显式声明支持注解
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    /*minifyEnabled true 混淆*/
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            /*//指定apk输出路径,使用gradle2.3.3插件语法输出apk，3.0语法不支持
+            android.applicationVariants.all { variant ->
+                variant.outputs.each  {output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def apkName
+                        if ("release".equalsIgnoreCase(variant.buildType.name)) {
+                            apkName = "material-design库-release-V${defaultConfig.versionName}-${buildTime()}.apk"
+                        } else {
+                            apkName = "material-design库-debug-V${defaultConfig.versionName}-${buildTime()}.apk"
+                        }
+                        println("父级目录："+outputFile.parent)
+                        output.outputFile = new File(outputFile.parent, apkName)
+                    }
+                }
+            }*/
+
+            //指定apk输出路径
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    if (outputFileName.endsWith('.apk')) {
+                        def apkName
+                        if ("release".equalsIgnoreCase(variant.buildType.name)) {
+                            apkName = "UI-demo-release-V${defaultConfig.versionName}-${buildTime()}.apk"
+                        } else {
+                            apkName = "UI-demo-debug-V${defaultConfig.versionName}-${buildTime()}.apk"
+                        }
+                        variant.getPackageApplication().outputScope.apkDatas.forEach { apkData ->
+                            //这个修改输出APK的文件名
+                            apkData.outputFileName = apkName
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+def buildTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"));
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    //官方库
+    compile rootProject.ext.supportDependencies.supportAppcompat
+    compile rootProject.ext.supportDependencies.supportRecyclerview
+    compile rootProject.ext.supportDependencies.supportCardview
+    compile rootProject.ext.supportDependencies.supportPalette
+    compile rootProject.ext.supportDependencies.supportDesign
+    //第三方库
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.orhanobut:logger:2.1.1'
+    compile 'com.alibaba:fastjson:1.1.70.android'
+    compile 'com.androidadvance:topsnackbar:1.1.1'
+    compile 'com.zhy:mpermission-api:1.0.0'
+    //as 3.0没有apt,必须这样写
+    annotationProcessor 'com.zhy:mpermission-compiler:1.0.0'
+    testCompile 'junit:junit:4.12'
+}
