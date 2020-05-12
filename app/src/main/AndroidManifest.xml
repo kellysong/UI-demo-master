@@ -89,6 +89,8 @@
         <activity android:name="com.sjl.ui.customseekbar.SeekBarActivity" />
         <activity android:name="com.sjl.ui.animation.ObjectAnimatorActivity" />
         <activity android:name="com.sjl.ui.wechattab.WeChatTabActivity" />
+        <activity android:name="com.sjl.activity.SpaceActivity"
+            android:windowSoftInputMode="adjustResize"/>
 
         <service android:name="com.sjl.ui.musicplayer.MusicService"/>
     </application>

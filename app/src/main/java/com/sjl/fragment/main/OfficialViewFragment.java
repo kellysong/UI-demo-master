@@ -13,6 +13,7 @@ import com.sjl.activity.RecyclerViewActivity;
 import com.sjl.activity.RecyclerViewGroupingActivity;
 import com.sjl.activity.SettingActivity;
 import com.sjl.activity.SnackBarActivity;
+import com.sjl.activity.SpaceActivity;
 import com.sjl.activity.TabLayoutActivity;
 import com.sjl.activity.TableListViewActivity;
 import com.sjl.activity.TextViewActivity;
@@ -20,8 +21,8 @@ import com.sjl.activity.TitleListViewActivity;
 import com.sjl.activity.WeChatMainActivity;
 import com.sjl.fragment.BaseFragment;
 import com.sjl.ui.expandableListView.ExpandableListViewActivity;
-import com.sjl.util.Utils;
 import com.sjl.uidemo.R;
+import com.sjl.util.Utils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -35,7 +36,7 @@ import butterknife.ButterKnife;
  * @time 2018/3/16 10:07
  * @copyright(C) 2018 深圳市北辰德科技股份有限公司
  */
-public class OfficialViewFragment extends BaseFragment implements View.OnClickListener{
+public class OfficialViewFragment extends BaseFragment implements View.OnClickListener {
     @Bind(R.id.btn_test1_1)
     Button btn_test1_1;
     @Bind(R.id.btn_test1)
@@ -60,11 +61,13 @@ public class OfficialViewFragment extends BaseFragment implements View.OnClickLi
     Button btn_test10;
     @Bind(R.id.btn_test11)
     Button btn_test11;
+    @Bind(R.id.btn_test12)
+    Button btn_test12;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.offcialview_fragment,container,false);
+        View view = inflater.inflate(R.layout.offcialview_fragment, container, false);
         ButterKnife.bind(this, view);
         btn_test1_1.setOnClickListener(this);
         btn_test1.setOnClickListener(this);
@@ -78,6 +81,7 @@ public class OfficialViewFragment extends BaseFragment implements View.OnClickLi
         btn_test9.setOnClickListener(this);
         btn_test10.setOnClickListener(this);
         btn_test11.setOnClickListener(this);
+        btn_test12.setOnClickListener(this);
         return view;
     }
 
@@ -88,42 +92,45 @@ public class OfficialViewFragment extends BaseFragment implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_test1_1:
-                Utils.openNewActivity(getActivity(),RecyclerView2Activity.class);
+                Utils.openNewActivity(getActivity(), RecyclerView2Activity.class);
                 break;
             case R.id.btn_test1:
-                Utils.openNewActivity(getActivity(),RecyclerViewActivity.class);
+                Utils.openNewActivity(getActivity(), RecyclerViewActivity.class);
                 break;
             case R.id.btn_test2:
-                Utils.openNewActivity(getActivity(),TabLayoutActivity.class);
+                Utils.openNewActivity(getActivity(), TabLayoutActivity.class);
                 break;
             case R.id.btn_test3:
-                Utils.openNewActivity(getActivity(),WeChatMainActivity.class);
+                Utils.openNewActivity(getActivity(), WeChatMainActivity.class);
                 break;
             case R.id.btn_test4:
-                Utils.openNewActivity(getActivity(),SettingActivity.class);
+                Utils.openNewActivity(getActivity(), SettingActivity.class);
                 break;
             case R.id.btn_test5:
-                Utils.openNewActivity(getActivity(),SnackBarActivity.class);
+                Utils.openNewActivity(getActivity(), SnackBarActivity.class);
                 break;
             case R.id.btn_test6:
-                Utils. openNewActivity(getActivity(),TableListViewActivity.class);
+                Utils.openNewActivity(getActivity(), TableListViewActivity.class);
                 break;
             case R.id.btn_test7:
-                Utils.openNewActivity(getActivity(),TitleListViewActivity.class);
+                Utils.openNewActivity(getActivity(), TitleListViewActivity.class);
                 break;
             case R.id.btn_test8:
-                Utils.openNewActivity(getActivity(),ButtonStyleActivity.class);
+                Utils.openNewActivity(getActivity(), ButtonStyleActivity.class);
                 break;
             case R.id.btn_test9:
-                Utils.openNewActivity(getActivity(),RecyclerViewGroupingActivity.class);
+                Utils.openNewActivity(getActivity(), RecyclerViewGroupingActivity.class);
                 break;
             case R.id.btn_test10:
-                Utils.openNewActivity(getActivity(),ExpandableListViewActivity.class);
+                Utils.openNewActivity(getActivity(), ExpandableListViewActivity.class);
                 break;
             case R.id.btn_test11:
-                Utils.openNewActivity(getActivity(),TextViewActivity.class);
+                Utils.openNewActivity(getActivity(), TextViewActivity.class);
+                break;
+            case R.id.btn_test12:
+                Utils.openNewActivity(getActivity(), SpaceActivity.class);
                 break;
             default:
                 break;
