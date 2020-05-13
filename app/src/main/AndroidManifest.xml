@@ -91,6 +91,7 @@
         <activity android:name="com.sjl.ui.wechattab.WeChatTabActivity" />
         <activity android:name="com.sjl.activity.SpaceActivity"
             android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.sjl.activity.RvDragDeleteActivity" />
 
         <service android:name="com.sjl.ui.musicplayer.MusicService"/>
     </application>

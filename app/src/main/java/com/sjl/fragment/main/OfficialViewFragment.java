@@ -11,6 +11,7 @@ import com.sjl.activity.ButtonStyleActivity;
 import com.sjl.activity.RecyclerView2Activity;
 import com.sjl.activity.RecyclerViewActivity;
 import com.sjl.activity.RecyclerViewGroupingActivity;
+import com.sjl.activity.RvDragDeleteActivity;
 import com.sjl.activity.SettingActivity;
 import com.sjl.activity.SnackBarActivity;
 import com.sjl.activity.SpaceActivity;
@@ -63,7 +64,8 @@ public class OfficialViewFragment extends BaseFragment implements View.OnClickLi
     Button btn_test11;
     @Bind(R.id.btn_test12)
     Button btn_test12;
-
+    @Bind(R.id.btn_test13)
+    Button btn_test13;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -82,6 +84,7 @@ public class OfficialViewFragment extends BaseFragment implements View.OnClickLi
         btn_test10.setOnClickListener(this);
         btn_test11.setOnClickListener(this);
         btn_test12.setOnClickListener(this);
+        btn_test13.setOnClickListener(this);
         return view;
     }
 
@@ -131,6 +134,9 @@ public class OfficialViewFragment extends BaseFragment implements View.OnClickLi
                 break;
             case R.id.btn_test12:
                 Utils.openNewActivity(getActivity(), SpaceActivity.class);
+                break;
+            case R.id.btn_test13:
+                Utils.openNewActivity(getActivity(), RvDragDeleteActivity.class);
                 break;
             default:
                 break;

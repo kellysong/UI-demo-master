@@ -131,5 +131,15 @@
             android:text="Space控件的应用场景"
             android:textColor="@android:color/white"
             android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_test13"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ripple_primary_with_light"
+            android:text="RecyclerView实现侧滑删除+拖拽移动"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
